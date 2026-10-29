@@ -1,0 +1,38 @@
+Living Room
+The small living room contains a couch, coffee table, and two armchairs.
+Pictures of various cousins adorn the walls along with two of your aunt's wretched attempts at oil painting.
+You can't help but notice that the carpet could use a good vacuuming.
+Doorways lead west to your father's office, north to your bedroom, and east to the kitchen.
+#
+Bedroom
+This is your domain and has been since your family moved here when you were six.
+A nightstand with a Superman lamp sits next to your twin bed.
+Posters of various anime characters cover one wall.
+A pile of laundry, slowly but surely attaining sentence, occupies the far corner.
+The door to the attic is in the ceiling above the pile of clothes.
+You can return south to the living room.
+#
+Office
+This is the place where your father spends most of his time.
+You see an old work laptop, a bookshelf with a bunch of dusty books, and a toolbox.
+I wonder if anything in here can help get the key?
+From the office door you can go east to the living room.
+#
+Kitchen
+The fridge makes a rumbling noise, making you wonder if there are any good snacks to grab?
+You see the pizza boxes from earlier that you and your family were eating.
+The garage door to the south just won't seem to budge.
+The only place you can go to is west, to the living room.
+#
+Attic
+You can't remember the last time you've actually used this thing.
+There are all kinds of old toys and games just sitting here.
+You even find old wedding photos of your parents.
+The door leading downwards returns you to your bedroom.
+#
+Garage
+The car, the car is here!
+Dad doesn't want me to drive it, but I just can't resist.
+There's a whole bunch of boxes also just sitting here, probably stuff for repairs.
+The door here takes you north, back to the kitchen.
+#

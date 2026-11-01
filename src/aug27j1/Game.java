@@ -123,17 +123,16 @@ public class Game {
 	
 	//Check if you can use an item
 	public static void useItem(String i) {
-		if(items.contains(i)==false)
+		boolean has = false;
+		for(Item item:items){
+			if(item.getItemName.equals(i)){
+				has = true;
+				item.use();
+				break;
+			}
+		}
+		if(!has)
 			print("You don't have the "+i+"!");
-		else 
-			if(location.equals("Living Room")) {
-				location.getItem(i).use();
-			}
-				
-			else if(location.equals("BedRoom")) {
-				location.getItem(i).use();
-			}
-				
 	}
 
 	

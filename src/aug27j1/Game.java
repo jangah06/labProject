@@ -124,7 +124,7 @@ public class Game {
 		else {
 			items.add(location.getItem(i));
 			print("You took: " + i);
-			location.removeItem(i;
+			location.removeItem(i);
 		}
 	}// end takeItem
 	

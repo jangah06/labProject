@@ -56,6 +56,7 @@ public class Game {
 			print("i - shows inventory");
 			print("take ___ - checks if item is in room and available to be picked up");
 			print("go ___ - goes east,west,north,south,up, or down");
+			print("use ___ - checks if you own the item, and then uses it");
 			print("save - saves your game");
 			print("loads - loads your previously saved game");
 			print("exit - exits the game");

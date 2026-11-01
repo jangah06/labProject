@@ -126,7 +126,7 @@ public class Game {
 	public static void useItem(String i) {
 		boolean has = false;
 		for(Item item:items){
-			if(item.getItemName.equals(i)){
+			if(item.getItemName().equals(i)){
 				has = true;
 				item.use();
 				break;

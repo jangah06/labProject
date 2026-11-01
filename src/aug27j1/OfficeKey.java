@@ -17,7 +17,7 @@ public class OfficeKey extends Item {
 				Game.getLocation().getExit(1).setLocked(false);
 				//usedKey = true;
 				Game.print("The office door makes a creaking sound and a dusty "
-						+ "scent fills your nose as you step in");
+						+ "scent fills your nostrils");
 			}
 		} else
 			Game.print("The Office Key doesn't seem to work for this.");

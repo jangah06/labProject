@@ -77,26 +77,32 @@ public class Game {
 		switch (d) {
 		case "east":
 			if (location.getExit(0) == null) print("No Room");
+			else if (location.getExit(0).getLocked()) print("This room is locked!");
 			else location = location.getExit(0);
 			break;
 		case "west":
 			if (location.getExit(1) == null) print("No Room");
+			else if (location.getExit(1).getLocked()) print("This room is locked!");
 			else location = location.getExit(1);
 			break;
 		case "north":
 			if (location.getExit(2) == null) print("No Room");
+			else if (location.getExit(2).getLocked()) print("This room is locked!");
 			else location = location.getExit(2);
 			break;
 		case "south":
 			if (location.getExit(3) == null) print("No Room");
+			else if (location.getExit(3).getLocked()) print("This room is locked!");
 			else location = location.getExit(3);
 			break;
 		case "up":
 			if (location.getExit(4) == null) print("No Room");
+			else if (location.getExit(4).getLocked()) print("This room is locked!");
 			else location = location.getExit(4);
 			break;
 		case "down":
 			if (location.getExit(5) == null) print("No Room");
+			else if (location.getExit(5).getLocked()) print("This room is locked!");
 			else location = location.getExit(5);
 			break;
 		default:

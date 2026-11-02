@@ -27,7 +27,7 @@ public class World {
 		garage.addExit(kitchen, 2);//north
 		
 		//Items
-		bedroom.addItem("officekey", new OfficeKey());
+		//bedroom.addItem("officekey", new OfficeKey());
 		livingRoom.addItem("tool", new Tool());
 		livingRoom.addItem("musicbox", new Item("musicbox"));
 		kitchen.addItem("knife", new Item("knife"));

@@ -56,6 +56,7 @@ public class Game {
 			print("i - shows inventory");
 			print("take ___ - checks if item is in room and available to be picked up");
 			print("go ___ - goes east,west,north,south,up, or down");
+			print("use ___ - checks if you own the item, and then uses it");
 			print("save - saves your game");
 			print("loads - loads your previously saved game");
 			print("exit - exits the game");
@@ -76,26 +77,32 @@ public class Game {
 		switch (d) {
 		case "east":
 			if (location.getExit(0) == null) print("No Room");
+			else if (location.getExit(0).getLocked()) print("This room is locked!");
 			else location = location.getExit(0);
 			break;
 		case "west":
 			if (location.getExit(1) == null) print("No Room");
+			else if (location.getExit(1).getLocked()) print("This room is locked!");
 			else location = location.getExit(1);
 			break;
 		case "north":
 			if (location.getExit(2) == null) print("No Room");
+			else if (location.getExit(2).getLocked()) print("This room is locked!");
 			else location = location.getExit(2);
 			break;
 		case "south":
 			if (location.getExit(3) == null) print("No Room");
+			else if (location.getExit(3).getLocked()) print("This room is locked!");
 			else location = location.getExit(3);
 			break;
 		case "up":
 			if (location.getExit(4) == null) print("No Room");
+			else if (location.getExit(4).getLocked()) print("This room is locked!");
 			else location = location.getExit(4);
 			break;
 		case "down":
 			if (location.getExit(5) == null) print("No Room");
+			else if (location.getExit(5).getLocked()) print("This room is locked!");
 			else location = location.getExit(5);
 			break;
 		default:
@@ -123,17 +130,16 @@ public class Game {
 	
 	//Check if you can use an item
 	public static void useItem(String i) {
-		if(items.contains(i)==false)
+		boolean has = false;
+		for(Item item:items){
+			if(item.getItemName().equals(i)){
+				has = true;
+				item.use();
+				break;
+			}
+		}
+		if(!has)
 			print("You don't have the "+i+"!");
-		else 
-			if(location.equals("Living Room")) {
-				location.getItem(i).use();
-			}
-				
-			else if(location.equals("BedRoom")) {
-				location.getItem(i).use();
-			}
-				
 	}
 
 	

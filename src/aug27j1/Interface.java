@@ -170,6 +170,9 @@ public class Interface extends JFrame {
         // Display the starting room
         refreshRoom();
 
+        //Prints game message
+        showMessage("Type 'c' to see the available commands.");
+
         // Process a command when the player presses Enter
         commandField.addActionListener(e -> processInput());
 

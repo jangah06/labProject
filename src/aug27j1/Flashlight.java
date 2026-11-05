@@ -14,13 +14,14 @@ public class Flashlight extends Item{
 				Game.print("Nothing interesting here.");
 			}
 			else {
-				Game.print("You see a key lying on the floot");
+				Game.print("You see a key lying on the floor");
 				Game.getLocation().addItem("officekey", new OfficeKey());
+				foundKey = true;
 			}
 			
 		}
 		else {
-			Game.print("");
+			Game.print("You turn the flashlight on and off for fun.");
 		}
 	}
 }

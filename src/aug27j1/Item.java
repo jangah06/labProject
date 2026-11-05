@@ -30,4 +30,16 @@ public class Item implements Serializable{
 	public void use() {
 		Game.print("You cannot use this item!");
 	}
+	
+	public void open() {
+		Game.print("You can't open this!");
+	}
+	
+	public void close() {
+		Game.print("You can't close this!");
+	}
+	
+	public void read() {
+		Game.print("You can't read this!");
+	}
 }

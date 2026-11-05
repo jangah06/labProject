@@ -11,7 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 public class Game {
 	private static Room location = World.buildWorld();
-	private static ArrayList<Item> items = new ArrayList<>();
+	public static ArrayList<Item> items = new ArrayList<>();
 	public static HashMap<String, String> rooms = new HashMap<>();
 	private static Interface gameInterface;
 
@@ -64,6 +64,18 @@ public class Game {
 		case"use":
 			if (cmd.length < 2) {print("Use what?");}
 			else {useItem(cmd[1]);}
+			break;
+		case"open":
+			if (cmd.length < 2) {print("Open what?");}
+			else {openItem(cmd[1]);}
+			break;
+		case"close":
+			if (cmd.length < 2) {print("Close what?");}
+			else {closeItem(cmd[1]);}
+			break;
+		case"read":
+			if (cmd.length < 2) {print("Read what?");}
+			else {readItem(cmd[1]);}
 			break;
 		default:
 			print("Error: Not a valid command!");
@@ -135,6 +147,32 @@ public class Game {
 			if(item.getItemName().equals(i)){
 				has = true;
 				item.use();
+				break;
+			}
+		}
+		if(!has)
+			print("You don't have the "+i+"!");
+	}
+	
+	public static void openItem(String i) {
+		if(location.getItem(i)!=null) {
+				location.getItem(i).open();
+		}
+		else {
+			Game.print("There is no safe to open here!");
+		}
+	}
+	
+	public static void closeItem(String i) {
+		location.getItem(i).close();
+	}
+	
+	public static void readItem(String i) {
+		boolean has = false;
+		for(Item item:items){
+			if(item.getItemName().equals(i)){
+				has = true;
+				item.read();
 				break;
 			}
 		}

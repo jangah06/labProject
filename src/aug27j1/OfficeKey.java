@@ -4,7 +4,7 @@ public class OfficeKey extends Item {
 	//private boolean usedKey;
 
 	public OfficeKey() {
-		super("OfficeKey");
+		super("officekey");
 		//usedKey = false;
 	}
 

@@ -27,18 +27,23 @@ public class World {
 		garage.addExit(kitchen, 2);//north
 		
 		//Items
-		//bedroom.addItem("officekey", new OfficeKey());
 		livingRoom.addItem("tool", new Tool());
 		livingRoom.addItem("musicbox", new Item("musicbox"));
 		kitchen.addItem("knife", new Item("knife"));
 		kitchen.addItem("mysteriousorb", new Item("mysteriousorb"));
+		bedroom.addItem("flashlight", new Flashlight());
+		//Heavy Objects
 		Item couch = new Item("couch");
 		couch.setCarry(false);
 		livingRoom.addItem("couch", couch);
 		
+		Item safe = new Safe();
+		safe.setCarry(false);
+		attic.addItem("safe", safe);
+		
 		//Locked Rooms
 		office.setLocked(true);
-		attic.setLocked(true);
+		//attic.setLocked(true);
 		garage.setLocked(true);
 		return livingRoom;
 	}

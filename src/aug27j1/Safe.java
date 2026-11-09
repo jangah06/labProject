@@ -9,11 +9,7 @@ public class Safe extends Item {
 		opened = false;
 		closed = false;
 	}
-
-	@Override
-	public void use() {
-		Game.print("test");
-	}
+	
 	@Override
 	public void open() {
 		

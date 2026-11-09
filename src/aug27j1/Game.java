@@ -155,12 +155,7 @@ public class Game {
 	}
 	
 	public static void openItem(String i) {
-		if(location.getItem(i)!=null) {
-				location.getItem(i).open();
-		}
-		else {
-			Game.print("There is no safe to open here!");
-		}
+		location.getItem(i).open();
 	}
 	
 	public static void closeItem(String i) {

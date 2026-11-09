@@ -43,7 +43,7 @@ public class World {
 		
 		//Locked Rooms
 		office.setLocked(true);
-		//attic.setLocked(true);
+		attic.setLocked(true);
 		garage.setLocked(true);
 		return livingRoom;
 	}

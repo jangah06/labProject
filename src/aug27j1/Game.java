@@ -207,7 +207,7 @@ public class Game {
 			FileOutputStream(saveFile));
 			outStream.writeObject(location);
 			outStream.writeObject(items);
-			outStream.writeObject(rooms);
+			outStream.writeObject(Room.saverooms);
 			outStream.close();
 		}
 		catch(Exception ex) {

@@ -228,17 +228,11 @@ public class Game {
 	}
 
 	public static void talkNPC(String i) {
-		boolean yes = false;
-		for(String key: Room.npcs.keySet()) {
-			if(key.equals(i))
-				yes = true;
-				Room.getNPC(i).talk();
-				break;
-		}
-		if (location.getNPC(i) == null)
+		NPC n = location.getNPC(i);
+		if(n != null)
+			n.talk();
+		else 
 			print(i + " isn't in this room!");
-		else if (!yes)
-			print("Who is that?");
 	}
 
 	// Reads room and description from text file

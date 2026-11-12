@@ -7,7 +7,7 @@ public class Room implements Serializable{
 	private String roomName;
 	private Room directions[];
 	private HashMap<String, Item> items;
-	public static HashMap<String, NPC> npcs;
+	private HashMap<String, NPC> npcs;
 	public static ArrayList<Room> saverooms= new ArrayList<>();
 	private boolean locked;
 	
@@ -71,7 +71,7 @@ public class Room implements Serializable{
 	public void addNPC(String cN, NPC n) {
 		npcs.put(cN, n);
 	}
-	public static NPC getNPC(String cN) {
+	public NPC getNPC(String cN) {
 		return npcs.get(cN);
 	}
 	

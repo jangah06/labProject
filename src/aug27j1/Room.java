@@ -7,6 +7,7 @@ public class Room implements Serializable{
 	private String roomName;
 	private Room directions[];
 	private HashMap<String, Item> items;
+	public static HashMap<String, NPC> npcs;
 	public static ArrayList<Room> saverooms= new ArrayList<>();
 	private boolean locked;
 	
@@ -14,6 +15,7 @@ public class Room implements Serializable{
 		roomName = rN;
 		directions = new Room[6];
 		items = new HashMap<>();
+		npcs = new HashMap<>();
 		saverooms.add(this);
 		locked = false;
 		}
@@ -64,5 +66,16 @@ public class Room implements Serializable{
 	
 	public void removeItem(String i) {
 		items.remove(i);
+	}
+	//For NPC class
+	public void addNPC(String cN, NPC n) {
+		npcs.put(cN, n);
+	}
+	public NPC getNPC(String cN) {
+		return npcs.get(cN);
+	}
+	
+	public void removeNPC(String cN) {
+		npcs.remove(cN);
 	}
 }// end all

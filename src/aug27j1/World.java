@@ -41,6 +41,9 @@ public class World {
 		safe.setCarry(false);
 		attic.addItem("safe", safe);
 		
+		//NPCs
+		livingRoom.addNPC("larry", new Larry());
+		
 		//Locked Rooms
 		office.setLocked(true);
 		attic.setLocked(true);

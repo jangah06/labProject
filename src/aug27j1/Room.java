@@ -71,7 +71,7 @@ public class Room implements Serializable{
 	public void addNPC(String cN, NPC n) {
 		npcs.put(cN, n);
 	}
-	public NPC getNPC(String cN) {
+	public static NPC getNPC(String cN) {
 		return npcs.get(cN);
 	}
 	

@@ -187,16 +187,13 @@ public class Game {
 
 	// Check if you can use an item
 	public static void useItem(String i) {
-		boolean has = false;
-		for (Item item : items) {
-			if (item.getItemName().equals(i)) {
-				has = true;
-				item.use();
-				break;
-			}
-		}
-		if (!has)
-			print("You don't have the " + i + "!");
+		Item k = location.getItem(i);
+		if(k==null)
+			k = findItem(i);
+		if(k==null)
+			print("You don't have "+i+"!");
+		else
+			k.use();
 	}
 
 	public static void openItem(String i) {
@@ -216,16 +213,13 @@ public class Game {
 	}
 	
 	public static void readItem(String i) {
-		boolean has = false;
-		for(Item item:items){
-			if(item.getItemName().equals(i)){
-				has = true;
-				item.read();
-				break;
-			}
-		}
-		if(!has)
-			print("You don't have the "+i+"!");
+		Item k = location.getItem(i);
+		if(k==null)
+			k = findItem(i);
+		if(k==null)
+			print("You don't have "+i+"!");
+		else
+			k.read();
 	}
 
 	public static void talkNPC(String i) {
@@ -294,6 +288,15 @@ public class Game {
 			System.out.println(s);
 		}
 	}// end print
+	
+	public static Item findItem(String i) {
+		for(Item item:items){
+			if(item.getItemName().equals(i)){
+				return item;
+			}
+		}
+		return null;
+	}
 
 	public static void setInterface(Interface gui) {
 		gameInterface = gui;

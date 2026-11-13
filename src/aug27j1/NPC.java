@@ -1,8 +1,10 @@
 package aug27j1;
 
+import java.io.Serializable;
+
 import javax.swing.JOptionPane;
 
-public class NPC {
+public class NPC implements Serializable{
 private String name;
 	public NPC(String n) {
 		name = n;

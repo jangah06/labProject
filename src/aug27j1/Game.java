@@ -60,8 +60,9 @@ public class Game {
 		case "c":
 			print("c - lists the game's commands");
 			print("i - shows inventory");
-			print("take ___ - checks if item is in room and available to be picked up");
 			print("go ___ - goes east,west,north,south,up, or down");
+			print("talk ___ - talks to NPC if they're in the room");
+			print("take ___ - checks if item is in room and available to be picked up");
 			print("use ___ - checks if you own the item, and then uses it");
 			print("open ___ - checks if item is in room and opens it");
 			print("close ___ - checks if item is in room and closes it");

@@ -233,7 +233,7 @@ public class Game {
 		if(n != null)
 			n.talk();
 		else 
-			print(i + " isn't in this room!");
+			print(i.toUpperCase() + " isn't in this room!");
 	}
 
 	// Reads room and description from text file

@@ -29,7 +29,8 @@ public class Larry extends NPC {
 
 	public void talk0() {
 		say("Hello! I'm the talking cat Larry!");
-		String[] s = { "Why are you able to talk?", "Do you know how to get to the garage?",
+		String[] s = { "Why are you able to talk?", 
+				"Do you know how to get to the garage?",
 				"You're one ugly animal!" };// end array
 
 		int option = getResponse(s);
@@ -54,23 +55,24 @@ public class Larry extends NPC {
 
 	public void talk1() {
 		say("I'm a rockstar!");
-		String[] s = { "But you're just a common house cat!", "Wow, you're really, truly amazing!", "Shush it." };// end
-																													// array
+		String[] s = { "But you're just a common house cat!", 
+				"Wow, you're really, truly amazing!", 
+				"Shush it." };// end array
 
 		int option = getResponse(s);
 
 		switch (option) {
 		case 1:
 			say("I'm that and so much more you fool!");
-			convoNumber = 4;
+			convoNumber = 11;
 			break;
 		case 2:
 			say("Why thank you human!");
-			convoNumber = 5;
+			convoNumber = 12;
 			break;
 		case 3:
 			say("*Hiss*");
-			convoNumber = 6;
+			convoNumber = 13;
 			break;
 		default:
 			say("Come again?");
@@ -79,23 +81,24 @@ public class Larry extends NPC {
 
 	public void talk2() {
 		say("What do you want now?");
-		String[] s = { "Are there any other secrets I should know about?", "Wow, you're really, truly amazing!",
-				"Shush it." };// end array
+		String[] s = { "Are there any other secrets I should know about?", 
+				"Do you want a treat?",
+				"Meow" };// end array
 
 		int option = getResponse(s);
 
 		switch (option) {
 		case 1:
-			say("I'm that and so much more you fool!");
-			convoNumber = 7;
+			say("I'll have to think about that.");
+			convoNumber = 21;
 			break;
 		case 2:
-			say("Why thank you human!");
-			convoNumber = 8;
+			say("Yes *meow*!");
+			convoNumber = 22;
 			break;
 		case 3:
-			say("*Hiss*");
-			convoNumber = 9;
+			say("Are you mocking me?");
+			convoNumber = 23;
 			break;
 		default:
 			say("Come again?");
@@ -103,24 +106,27 @@ public class Larry extends NPC {
 	}
 
 	public void talk3() {
-		say("What do you want now?");
-		String[] s = { "Are there any other secrets I should know about?", "Wow, you're really, truly amazing!",
-				"Shush it." };// end array
+		say("Why were you so rude to me?");
+		String[] s = { "Sorry it was a joke.", 
+				"Sorry I just couldn't help but point out the obvious!",
+				"Why you gotta be so rude? Don't you know I'm human too? "
+				+ "I'm gonna marry her anyway (marry that girl)." };// end array
 
 		int option = getResponse(s);
 
 		switch (option) {
 		case 1:
-			say("I'm that and so much more you fool!");
-			convoNumber = 10;
+			say("You're stupid, joking!");
+			convoNumber = 31;
 			break;
 		case 2:
-			say("Why thank you human!");
-			convoNumber = 11;
+			say("I was gonna tell you a little extra info about the garage, "
+					+ "but I've changed my mind!");
+			convoNumber = 32;
 			break;
 		case 3:
-			say("*Hiss*");
-			convoNumber = 12;
+			say("I haven't heard that song in a while.");
+			convoNumber = 33;
 			break;
 		default:
 			say("Come again?");
@@ -129,35 +135,33 @@ public class Larry extends NPC {
 
 	public void talkfinal() {
 		switch (convoNumber) {
-		case 4:
-			say("I'm that and so much more you fool!");
-			break;
-		case 5:
-			say("Why thank you human!");
-			break;
-		case 6:
-			say("*Hiss*");
-			break;
-		case 7:
-			say("I'm that and so much more you fool!");
-			break;
-		case 8:
-			say("Why thank you human!");
-			break;
-		case 9:
-			say("*Hiss*");
-			break;
-		case 10:
-			say("I'm that and so much more you fool!");
-			break;
 		case 11:
-			say("Why thank you human!");
+			say("Foolish human!");
 			break;
 		case 12:
-			say("*Hiss*");
+			say("Give me more and more praise *meow*!");
 			break;
-		default:
-			say("Come again?");
+		case 13:
+			say("Get away from me!");
+			break;
+		case 21:
+			say("I'm still thinking...");
+			break;
+		case 22:
+			say("Wnere are the treats at?");
+			break;
+		case 23:
+			say("I'm a human and I go 'bleh'.");
+			break;
+		case 31:
+			say("Hahahaha");
+			break;
+		case 32:
+			say("Get lost stupid!");
+			break;
+		case 33:
+			say("I've had enough of your singing for today.");
+			break;
 		}
 	}
 

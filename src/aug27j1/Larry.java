@@ -29,10 +29,9 @@ public class Larry extends NPC {
 
 	public void talk0() {
 		say("Hello! I'm the talking cat Larry!");
-		String[] s = { "Why are you able to talk?", 
-				"Do you know how to get to the garage?",
+		String[] s = { "Why are you able to talk?", "Do you know how to get to the garage?",
 				"You're one ugly animal!" };// end array
-		
+
 		int option = getResponse(s);
 
 		switch (option) {
@@ -55,10 +54,9 @@ public class Larry extends NPC {
 
 	public void talk1() {
 		say("I'm a rockstar!");
-		String[] s = { "But you're just a common house cat!", 
-				"Wow, you're really, truly amazing!", 
-				"Shush it." };// end array
-		
+		String[] s = { "But you're just a common house cat!", "Wow, you're really, truly amazing!", "Shush it." };// end
+																													// array
+
 		int option = getResponse(s);
 
 		switch (option) {
@@ -81,10 +79,9 @@ public class Larry extends NPC {
 
 	public void talk2() {
 		say("What do you want now?");
-		String[] s = { "Are there any other secrets I should know about?", 
-				"Wow, you're really, truly amazing!",
+		String[] s = { "Are there any other secrets I should know about?", "Wow, you're really, truly amazing!",
 				"Shush it." };// end array
-		
+
 		int option = getResponse(s);
 
 		switch (option) {
@@ -104,13 +101,12 @@ public class Larry extends NPC {
 			say("Come again?");
 		}
 	}
-	
+
 	public void talk3() {
 		say("What do you want now?");
-		String[] s = { "Are there any other secrets I should know about?", 
-				"Wow, you're really, truly amazing!",
+		String[] s = { "Are there any other secrets I should know about?", "Wow, you're really, truly amazing!",
 				"Shush it." };// end array
-		
+
 		int option = getResponse(s);
 
 		switch (option) {
@@ -130,7 +126,7 @@ public class Larry extends NPC {
 			say("Come again?");
 		}
 	}
-	
+
 	public void talkfinal() {
 		switch (convoNumber) {
 		case 4:

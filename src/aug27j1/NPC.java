@@ -23,6 +23,10 @@ private String name;
 		Game.print("You can't talk to them.");
 	}
 	
+	public void give(Item i) {
+		Game.print("I don't need that.");
+	}
+	
 	public int getResponse(String[] s) {
 		for(int i=0;i<s.length;i++) {
 			Game.print((i+1)+") "+s[i]);

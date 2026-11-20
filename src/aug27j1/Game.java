@@ -66,6 +66,7 @@ public class Game {
 			print("open ___ - checks if item is in room and opens it");
 			print("close ___ - checks if item is in room and closes it");
 			print("read ___ - checks if you own the item, and reads it");
+			print("give ___ - checks if you own the item, and gives it to the specified NPC");
 			print("save - saves your game");
 			print("loads - loads your previously saved game");
 			print("exit - exits the game");
@@ -103,6 +104,13 @@ public class Game {
 				print("Talk to whom?");
 			} else {
 				talkNPC(cmd[1]);
+			}
+			
+		case "give":
+			if (cmd.length < 2) {
+				print("Give what?");
+			} else {
+				takeItem(cmd[1]);
 			}
 			break;
 		default:

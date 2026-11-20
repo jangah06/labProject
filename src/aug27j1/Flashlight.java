@@ -14,8 +14,12 @@ public class Flashlight extends Item{
 				Game.print("Nothing interesting here.");
 			}
 			else {
-				Game.print("You see a key lying on the floor");
+				Game.print("You see a your dad's officekey "
+						+ "mysteriously lying on the floor. On your dresser"
+						+ " you see the $20.50 you planned to use to buy"
+						+ " a game for your Xbox.");
 				Game.getLocation().addItem("officekey", new OfficeKey());
+				Game.getLocation().addItem("$20.50", new Item("$20.50"));
 				foundKey = true;
 			}
 			

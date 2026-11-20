@@ -43,6 +43,7 @@ public class World {
 		
 		//NPCs
 		livingRoom.addNPC("larry", new Larry());
+		kitchen.addNPC("brother", new Brother());
 		
 		//Locked Rooms
 		office.setLocked(true);

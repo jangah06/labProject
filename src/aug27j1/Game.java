@@ -105,12 +105,17 @@ public class Game {
 			} else {
 				talkNPC(cmd[1]);
 			}
+			break;
 			
 		case "give":
-			if (cmd.length < 2) {
+			if (cmd.length < 3) {
 				print("Give what?");
-			} else {
-				takeItem(cmd[1]);
+			} else if(location.getNPC(cmd[1])==null) {
+				print(cmd[1]+" isn't in this room!");
+			} else if(findItem(cmd[2])==null) {
+				print("You don't have the "+cmd[2]+"!");
+			}else {
+				giveNPC(cmd[1], cmd[2]);
 			}
 			break;
 		default:
@@ -235,6 +240,10 @@ public class Game {
 			n.talk();
 		else 
 			print(i.toUpperCase() + " isn't in this room!");
+	}
+	
+	public static void giveNPC(String n,String i) {
+		location.getNPC(n).give(findItem(i));
 	}
 
 	// Reads room and description from text file

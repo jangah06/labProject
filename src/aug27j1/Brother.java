@@ -11,6 +11,12 @@ public class Brother extends NPC{
 	public void give(Item i) {
 		if(!i.getItemName().equals("$20.50"))
 			say("What?! That's not what I asked for!");
+		
+		else if(convoNumber!=1) {
+			Game.items.remove(i);
+			say("Thanks I guess??");
+			convoNumber = 11;
+		}
 			
 		else {
 			Game.items.add(new Item("safepass"));

@@ -17,26 +17,28 @@ public class Safe extends Item {
 				Game.print("You open the safe, but find nothing inside.");
 			}
 			else if(!opened) {
-				Game.getLocation().addItem("notebook", new Notebook());
-				opened = true;
-				Game.print("You open the safe and find a notebook.");
+				if(Game.findItem("safepass")==null)
+					Game.print("You reach for the safe, "
+							+ "but remember you don't have the passcode.");
+				else {
+					Game.getLocation().addItem("notebook", new Notebook());
+					opened = true;
+					Game.print("You open the safe and find a notebook.");
+				}
 			}
 		}
 	
 	@Override
 	public void close() {
 		if(Game.getLocation().getRname().equals("attic")) {
-			if(closed) {
+			if(closed) 
 				Game.print("You already closed the safe silly!");
-			}
+			else if(Game.findItem("password")==null)
+				Game.print("You never opened the safe in the first place!");
 			else {
 				closed = true;
 				Game.print("You close the safe.");
 			}
 		}
-		else {
-			Game.print("There is no safe to close here!");
-		}
 	}
-	
 }//end class

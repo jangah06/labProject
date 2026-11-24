@@ -12,33 +12,38 @@ public class Safe extends Item {
 	
 	@Override
 	public void open() {
-		
 			if(opened) {
-				Game.print("You open the safe, but find nothing inside.");
+				Game.print("You already opened the safe silly!");
 			}
 			else if(!opened) {
 				if(Game.findItem("safepass")==null)
 					Game.print("You reach for the safe, "
 							+ "but remember you don't have the passcode.");
-				else {
+				else if(Game.findItem("notebook")==null){
 					Game.getLocation().addItem("notebook", new Notebook());
 					opened = true;
+					closed = false;
 					Game.print("You open the safe and find a notebook.");
 				}
+				else
+					Game.print("You open the safe, but find nothing inside.");
+					opened = true;
+					closed = false;
 			}
 		}
 	
 	@Override
 	public void close() {
-		if(Game.getLocation().getRname().equals("attic")) {
-			if(closed) 
-				Game.print("You already closed the safe silly!");
-			else if(Game.findItem("password")==null)
+		if(closed) 
+			Game.print("You already closed the safe silly!");
+		else if(!closed) {
+			if(Game.findItem("notebook")==null)
 				Game.print("You never opened the safe in the first place!");
 			else {
 				closed = true;
+				opened = false;
 				Game.print("You close the safe.");
 			}
-		}
+		}	
 	}
 }//end class
